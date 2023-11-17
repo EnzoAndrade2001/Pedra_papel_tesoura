@@ -9,6 +9,7 @@ package pedrapapeltesoura;
  *
  * @author 182220019
  */
+// Atualizar
 public class PedraPapelTesoura {
 
 
