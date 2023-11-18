@@ -28,19 +28,34 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jbInicioJogo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtxtfPlayerIa" max="32767" attributes="0"/>
-                          <Component id="jtxtfNomePlayer1" pref="120" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="rbtPedraJ2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbtPapelJ2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbtTesouraJ2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="rbtPedraJ1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbtPapelJ1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="rbtTesouraJ1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="242" max="-2" attributes="0"/>
                       <Component id="jlabelTitulo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                      <Component id="jbMostraGanhador" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="271" max="32767" attributes="0"/>
@@ -52,19 +67,23 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jlabelTitulo" min="-2" pref="55" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtxtfNomePlayer1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtPedraJ1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtPapelJ1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtTesouraJ1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtxtfPlayerIa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtPedraJ2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtPapelJ2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtTesouraJ2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="jbInicioJogo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="349" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="jbMostraGanhador" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="340" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -78,32 +97,70 @@
         <Property name="text" type="java.lang.String" value="Pedra Papel Tesoura"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JButton" name="jbMostraGanhador">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Informe seu nome de jogador:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Informe o nome da IA:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jtxtfNomePlayer1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="  "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jtxtfPlayerIa">
-      <Properties>
-        <Property name="text" type="java.lang.String" value=" "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jbInicioJogo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Come&#xe7;ar o jogo"/>
+        <Property name="text" type="java.lang.String" value="Mostrar o Vencedor"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbInicioJogoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMostraGanhadorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jogador 1:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtPedraJ1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pedra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtPedraJ1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtPapelJ1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Papel"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtPapelJ1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtTesouraJ1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tesoura"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtTesouraJ1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jogador 2:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtPedraJ2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Pedra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtPedraJ2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtPapelJ2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Papel"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtPapelJ2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbtTesouraJ2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tesoura"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtTesouraJ2ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

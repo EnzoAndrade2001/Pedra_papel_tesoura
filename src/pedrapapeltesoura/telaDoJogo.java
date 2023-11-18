@@ -12,10 +12,8 @@ import javax.swing.JOptionPane;
  * @author 182220019
  */
 public class telaDoJogo extends javax.swing.JFrame {
+int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
 
-    /**
-     * Creates new form telaDoJogo
-     */
     public telaDoJogo() {
         initComponents();
     }
@@ -30,29 +28,71 @@ public class telaDoJogo extends javax.swing.JFrame {
     private void initComponents() {
 
         jlabelTitulo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jtxtfNomePlayer1 = new javax.swing.JTextField();
-        jtxtfPlayerIa = new javax.swing.JTextField();
-        jbInicioJogo = new javax.swing.JButton();
+        jbMostraGanhador = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        rbtPedraJ1 = new javax.swing.JRadioButton();
+        rbtPapelJ1 = new javax.swing.JRadioButton();
+        rbtTesouraJ1 = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+        rbtPedraJ2 = new javax.swing.JRadioButton();
+        rbtPapelJ2 = new javax.swing.JRadioButton();
+        rbtTesouraJ2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jlabelTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jlabelTitulo.setText("Pedra Papel Tesoura");
 
-        jLabel1.setText("Informe seu nome de jogador:");
-
-        jLabel2.setText("Informe o nome da IA:");
-
-        jtxtfNomePlayer1.setText("  ");
-
-        jtxtfPlayerIa.setText(" ");
-
-        jbInicioJogo.setText("Começar o jogo");
-        jbInicioJogo.addActionListener(new java.awt.event.ActionListener() {
+        jbMostraGanhador.setText("Mostrar o Vencedor");
+        jbMostraGanhador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbInicioJogoActionPerformed(evt);
+                jbMostraGanhadorActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Jogador 1:");
+
+        rbtPedraJ1.setText("Pedra");
+        rbtPedraJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtPedraJ1ActionPerformed(evt);
+            }
+        });
+
+        rbtPapelJ1.setText("Papel");
+        rbtPapelJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtPapelJ1ActionPerformed(evt);
+            }
+        });
+
+        rbtTesouraJ1.setText("Tesoura");
+        rbtTesouraJ1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtTesouraJ1ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Jogador 2:");
+
+        rbtPedraJ2.setText("Pedra");
+        rbtPedraJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtPedraJ2ActionPerformed(evt);
+            }
+        });
+
+        rbtPapelJ2.setText("Papel");
+        rbtPapelJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtPapelJ2ActionPerformed(evt);
+            }
+        });
+
+        rbtTesouraJ2.setText("Tesoura");
+        rbtTesouraJ2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtTesouraJ2ActionPerformed(evt);
             }
         });
 
@@ -65,16 +105,28 @@ public class telaDoJogo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(63, 63, 63)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jbInicioJogo))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtxtfPlayerIa)
-                            .addComponent(jtxtfNomePlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbtPedraJ2)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbtPapelJ2)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbtTesouraJ2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbtPedraJ1)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbtPapelJ1)
+                                .addGap(18, 18, 18)
+                                .addComponent(rbtTesouraJ1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(242, 242, 242)
-                        .addComponent(jlabelTitulo)))
+                        .addComponent(jlabelTitulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jbMostraGanhador)))
                 .addContainerGap(271, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -82,26 +134,69 @@ public class telaDoJogo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jlabelTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(rbtPedraJ1)
+                    .addComponent(rbtPapelJ1)
+                    .addComponent(rbtTesouraJ1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jtxtfNomePlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtxtfPlayerIa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(jbInicioJogo)
-                .addContainerGap(349, Short.MAX_VALUE))
+                    .addComponent(jLabel5)
+                    .addComponent(rbtPedraJ2)
+                    .addComponent(rbtPapelJ2)
+                    .addComponent(rbtTesouraJ2))
+                .addGap(27, 27, 27)
+                .addComponent(jbMostraGanhador)
+                .addContainerGap(340, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbInicioJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbInicioJogoActionPerformed
-   JOptionPane.showInputDialog(null,"Escolha Pedra(1),Papel(2) ou Tesoura(3)");
-   
-    }//GEN-LAST:event_jbInicioJogoActionPerformed
+    private void jbMostraGanhadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMostraGanhadorActionPerformed
+      if  (pedraj1.isSelected() && tesouraj2.isSelected() || 
+                papelj1.isSelected() && pedraj2.isSelected() ||
+                    tesouraj1.isSelected() && papelj2.isSelected()) {
+        JoptionPane.showMessageDialog(this,"Jogador 1 venceu");
+    else if
+        (pedraj2.isSelected() && tesouraj1.isSelected() || 
+                papelj1.isSelected() && pedraj2.isSelected() ||
+                    tesouraj1.isSelected() && papelj2.isSelected())
+                
+        
+                
+            
+        
+                
+}
+
+
+    }//GEN-LAST:event_jbMostraGanhadorActionPerformed
+
+    private void rbtPedraJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPedraJ1ActionPerformed
+pedraj1 = 0;    
+    }//GEN-LAST:event_rbtPedraJ1ActionPerformed
+
+    private void rbtPapelJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPapelJ1ActionPerformed
+papelj1 = 1;        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtPapelJ1ActionPerformed
+
+    private void rbtTesouraJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTesouraJ1ActionPerformed
+tesouraj1 = 2;        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtTesouraJ1ActionPerformed
+
+    private void rbtPedraJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPedraJ2ActionPerformed
+pedraj2 = 0;        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtPedraJ2ActionPerformed
+
+    private void rbtPapelJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPapelJ2ActionPerformed
+papelj2 = 1;        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtPapelJ2ActionPerformed
+
+    private void rbtTesouraJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTesouraJ2ActionPerformed
+ tesouraj2 = 2;
+    }//GEN-LAST:event_rbtTesouraJ2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,11 +234,15 @@ public class telaDoJogo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton jbInicioJogo;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JButton jbMostraGanhador;
     private javax.swing.JLabel jlabelTitulo;
-    private javax.swing.JTextField jtxtfNomePlayer1;
-    private javax.swing.JTextField jtxtfPlayerIa;
+    private javax.swing.JRadioButton rbtPapelJ1;
+    private javax.swing.JRadioButton rbtPapelJ2;
+    private javax.swing.JRadioButton rbtPedraJ1;
+    private javax.swing.JRadioButton rbtPedraJ2;
+    private javax.swing.JRadioButton rbtTesouraJ1;
+    private javax.swing.JRadioButton rbtTesouraJ2;
     // End of variables declaration//GEN-END:variables
 }
