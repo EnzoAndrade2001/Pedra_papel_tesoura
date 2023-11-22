@@ -161,8 +161,13 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
         JoptionPane.showMessageDialog(this,"Jogador 1 venceu");
     else if
         (pedraj2.isSelected() && tesouraj1.isSelected() || 
-                papelj1.isSelected() && pedraj2.isSelected() ||
-                    tesouraj1.isSelected() && papelj2.isSelected())
+                papelj2.isSelected() && pedraj1.isSelected() ||
+                    tesouraj2.isSelected() && papelj1.isSelected())
+        JoptionPane.showMessageDialog(this,"Jogador 2 venceu");
+        (pedraj2.isSelected() && pedraj1.isSelected() || 
+                papelj2.isSelected() && papelj1.isSelected() ||
+                    tesouraj2.isSelected() && tesouraj1.isSelected())
+        JoptionPane.showMessageDialog(this,"Empate!!");        
                 
         
                 
