@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author 182220019
  */
 public class telaDoJogo extends javax.swing.JFrame {
-int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
+
 
     public telaDoJogo() {
         initComponents();
@@ -27,6 +27,8 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jlabelTitulo = new javax.swing.JLabel();
         jbMostraGanhador = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -52,6 +54,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
 
         jLabel4.setText("Jogador 1:");
 
+        buttonGroup1.add(rbtPedraJ1);
         rbtPedraJ1.setText("Pedra");
         rbtPedraJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +62,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
             }
         });
 
+        buttonGroup1.add(rbtPapelJ1);
         rbtPapelJ1.setText("Papel");
         rbtPapelJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +70,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
             }
         });
 
+        buttonGroup1.add(rbtTesouraJ1);
         rbtTesouraJ1.setText("Tesoura");
         rbtTesouraJ1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +80,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
 
         jLabel5.setText("Jogador 2:");
 
+        buttonGroup2.add(rbtPedraJ2);
         rbtPedraJ2.setText("Pedra");
         rbtPedraJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +88,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
             }
         });
 
+        buttonGroup2.add(rbtPapelJ2);
         rbtPapelJ2.setText("Papel");
         rbtPapelJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +96,7 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
             }
         });
 
+        buttonGroup2.add(rbtTesouraJ2);
         rbtTesouraJ2.setText("Tesoura");
         rbtTesouraJ2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,47 +163,45 @@ int pedraj1, tesouraj1, papelj1, pedraj2, tesouraj2, papelj2;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbMostraGanhadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMostraGanhadorActionPerformed
-      if  (pedraj1.isSelected() && tesouraj2.isSelected() || 
-                papelj1.isSelected() && pedraj2.isSelected() ||
-                    tesouraj1.isSelected() && papelj2.isSelected()) {
-        JoptionPane.showMessageDialog(this,"Jogador 1 venceu");
-    else if
-        (pedraj2.isSelected() && tesouraj1.isSelected() || 
-                papelj1.isSelected() && pedraj2.isSelected() ||
-                    tesouraj1.isSelected() && papelj2.isSelected())
-                
-        
-                
-            
-        
-                
-}
+        if(rbtPedraJ1.isSelected() && rbtTesouraJ2.isSelected() ||
+                rbtPapelJ1.isSelected() && rbtPedraJ2.isSelected() ||
+                    rbtTesouraJ1.isSelected() && rbtPapelJ2.isSelected()) {
+        JOptionPane.showMessageDialog(null,"Jogador 1 venceu");
+        }
+        else if (rbtPedraJ2.isSelected() && rbtTesouraJ1.isSelected() ||
+                    rbtPapelJ2.isSelected() && rbtPedraJ1.isSelected() ||
+                        rbtTesouraJ2.isSelected() && rbtPapelJ1.isSelected()) {
+        JOptionPane.showMessageDialog(null,"Jogador 2 venceu");
+         }
+         else{
+        JOptionPane.showMessageDialog(null,"Empate!!");        
+               }  
 
 
     }//GEN-LAST:event_jbMostraGanhadorActionPerformed
 
     private void rbtPedraJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPedraJ1ActionPerformed
-pedraj1 = 0;    
+ 
     }//GEN-LAST:event_rbtPedraJ1ActionPerformed
 
     private void rbtPapelJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPapelJ1ActionPerformed
-papelj1 = 1;        // TODO add your handling code here:
+     // TODO add your handling code here:
     }//GEN-LAST:event_rbtPapelJ1ActionPerformed
 
     private void rbtTesouraJ1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTesouraJ1ActionPerformed
-tesouraj1 = 2;        // TODO add your handling code here:
+     // TODO add your handling code here:
     }//GEN-LAST:event_rbtTesouraJ1ActionPerformed
 
     private void rbtPedraJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPedraJ2ActionPerformed
-pedraj2 = 0;        // TODO add your handling code here:
+    // TODO add your handling code here:
     }//GEN-LAST:event_rbtPedraJ2ActionPerformed
 
     private void rbtPapelJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtPapelJ2ActionPerformed
-papelj2 = 1;        // TODO add your handling code here:
+    // TODO add your handling code here:
     }//GEN-LAST:event_rbtPapelJ2ActionPerformed
 
     private void rbtTesouraJ2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtTesouraJ2ActionPerformed
- tesouraj2 = 2;
+
     }//GEN-LAST:event_rbtTesouraJ2ActionPerformed
 
     /**
@@ -234,6 +240,8 @@ papelj2 = 1;        // TODO add your handling code here:
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JButton jbMostraGanhador;

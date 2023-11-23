@@ -14,7 +14,7 @@ public class PedraPapelTesoura {
 
 
     public static void main(String[] args) {
-        
+         new telaDoJogo().setVisible(true);
     }
     
 }
