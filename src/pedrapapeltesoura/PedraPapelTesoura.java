@@ -17,4 +17,6 @@ public class PedraPapelTesoura {
          new telaDoJogo().setVisible(true);
     }
     
+    //  Editei Diferente
+    
 }
