@@ -18,5 +18,7 @@ public class PedraPapelTesoura {
     }
     
     //  Editei Diferente novamente
+
+    //aaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
     
 }
